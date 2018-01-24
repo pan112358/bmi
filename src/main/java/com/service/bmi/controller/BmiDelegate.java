@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public class BmiDelegate implements Bmi {
+public class BmiDelegate {
 
 	final static double UNDER_WEIGHT = 18.5;
 	final static String UNDER_WEIGHT_MESSAGE = "under weight"; 
