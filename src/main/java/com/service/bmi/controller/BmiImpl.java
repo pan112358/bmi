@@ -7,22 +7,20 @@ import org.springframework.web.bind.annotation.*;
 
 import io.servicecomb.provider.rest.common.RestSchema;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.CseSpringDemoCodegen", date = "2018-01-24T08:04:43.926Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.CseSpringDemoCodegen", date = "2018-01-24T07:01:57.073Z")
 
 @RestSchema(schemaId = "bmi")
 @RequestMapping(path = "/bmi", produces = MediaType.APPLICATION_JSON)
-public class BmiImpl {
+public class BmiImpl{
 
     @Autowired
-    private BmiDelegate userBmiDelegate;
+    private BmiDelegate bmiDelegate;
 
 
-    @RequestMapping(value = "/helloworld",
-        produces = { "application/json" }, 
-        method = RequestMethod.GET)
-    public String helloworld( @RequestParam(value = "name", required = true) String name){
+    public String helloworld(String name, String height, String weight) {
 
-        return userBmiDelegate.helloworld(name);
+        return bmiDelegate.helloworld(name, height, weight);
     }
 
 }
+
