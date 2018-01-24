@@ -11,7 +11,7 @@ import io.servicecomb.provider.rest.common.RestSchema;
 
 @RestSchema(schemaId = "bmi")
 @RequestMapping(path = "/bmi", produces = MediaType.APPLICATION_JSON)
-public class BmiImpl implements Bmi{
+public class BmiImpl{
 
     @Autowired
     private BmiDelegate bmiDelegate;
