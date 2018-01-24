@@ -12,11 +12,10 @@ public class TestBmi {
 
 
     @Test
-    public void testhelloworld(){
+public void testhelloworld(){
+        String expactReturnValue = "Hi, Tom. You are " + BmiDelegate.NORMAL_WEIGHT_MESSAGE + ".";
 
-        String expactReturnValue = "hello"; // You should put the expect String type value here.
-
-        String returnValue = bmiDelegate.helloworld("hello");
+        String returnValue = bmiDelegate.helloworld("Tom", "170", "70");
 
         assertEquals(expactReturnValue, returnValue);
     }
