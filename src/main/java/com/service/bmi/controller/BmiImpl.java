@@ -14,15 +14,12 @@ import io.servicecomb.provider.rest.common.RestSchema;
 public class BmiImpl {
 
     @Autowired
-    private BmiDelegate userBmiDelegate;
+    private BmiDelegate bmiDelegate;
 
 
-    @RequestMapping(value = "/helloworld",
-        produces = { "application/json" }, 
-        method = RequestMethod.GET)
-    public String helloworld( @RequestParam(value = "name", required = true) String name){
+    public String helloworld(String name, String height, String weight) {
 
-        return userBmiDelegate.helloworld(name);
+        return bmiDelegate.helloworld(name, height, weight);
     }
 
 }
